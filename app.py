@@ -8,7 +8,7 @@ from sort_school.utils import Graph, generate
 st.set_page_config(layout='wide')
 
 with st.sidebar:
-    link='[Sort School by NFJ1618](https://nfj1618.github.io/)'
+    link='[Sort School](https://github.com/NFJ1618/sort-school) by [NFJ1618](https://nfj1618.github.io/)'
     st.title(link)
     r = st.selectbox('Start array', ('Random', 'Partly Random', 'Partly Sorted', 'Almost Sorted', 'Reverse Sorted'))
     t = st.slider('Delay (ms)', 0, 1000, step=250) / 1000
