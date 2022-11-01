@@ -7,12 +7,12 @@ with open("requirements.txt", "r") as f:
 
 
 setup(
-    name='Page Shuffler',
+    name='Sort School',
     packages=find_packages(),
     install_requires=reqs,
-    #url='https://github.com/NFJ1618/page-shuffler',
+    url='https://github.com/NFJ1618/sort-school',
     license='MIT',
     author='Jai Parera',
     author_email='jaiparera@g.ucla.edu',
-    description='A simple web-app based to upload, shuffle, and download your PDF files'
+    description='A simple web-app to visually teach you about sorting algorithms!'
     )

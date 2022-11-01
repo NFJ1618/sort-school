@@ -1,7 +1,7 @@
 import streamlit as st
 import time
-from sorts import *
-from utils import Graph, generate
+from sort_school.sorts import *
+from sort_school.utils import Graph, generate
 
 
 
