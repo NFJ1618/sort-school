@@ -29,9 +29,13 @@ def generate(n, shuf_type):
     return t
 
 class Graph:
-    def __init__(self, correct):
+    def __init__(self, correct, ismerge):
         self.correct = correct
-        self.placeholder = st.empty()
+        self.ismerge = ismerge
+        if self.ismerge:
+            self.placeholder = st.empty()
+        else:
+            self.placeholder = st.empty()
 
     def graph(self, x):
         df = pd.DataFrame({"array": x, "sorted": ['True' if x[i] == self.correct[i] else 'False' for i in range(len(x))]})
@@ -56,5 +60,13 @@ class Graph:
         data.update_yaxes(visible=False)
         return data
 
-    def plot(self, x):
-        self.placeholder.plotly_chart(self.graph(x), use_container_width=True)
+    def plot(self, x, y=None):
+        if self.ismerge:
+            # left = st.plotly_chart()
+            # right = st.plotly_chart()
+            with self.placeholder:
+                col1, col2 = st.columns(2)
+                col1.plotly_chart(self.graph(x), use_container_width=True)
+                col2.plotly_chart(self.graph(y), use_container_width=True)
+        else:
+            self.placeholder.plotly_chart(self.graph(x), use_container_width=True)
