@@ -1,6 +1,6 @@
 <img src="./logo.jpg" alt="logo" height="250"/>
 
-# [sort-school](https://nfj1618-sort-school-app-lphp4n.streamlitapp.com/)
+# [sort-school](https://sort-school.streamlit.app/)
 
 A simple [Streamlit](https://streamlit.io/) 🎈 web app to help you visualize and learn about different sorting algorithms!
 
